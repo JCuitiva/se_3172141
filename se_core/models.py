@@ -157,12 +157,12 @@ class Areas(models.Model):
     
 
 class Asignaturas(models.Model):
-    nombre = models.CharField(max_length=100, unique=True)
+    nombre = models.CharField(max_length=100)
     grado = models.ForeignKey(Grados, on_delete=models.CASCADE, related_name="asignaturas")
     area = models.ForeignKey(Areas, on_delete=models.CASCADE, related_name="asignaturas")
 
     class Meta:
-        unique_together = ('nombre', 'area', 'nombre')
+        unique_together = ('nombre', 'grado', 'area')
         verbose_name = "Asignatura"
         verbose_name_plural = "Asignaturas"
 
