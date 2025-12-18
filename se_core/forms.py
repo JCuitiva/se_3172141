@@ -8,7 +8,7 @@ class UsuarioCreationForm(AdminUserCreationForm):
         fields = ("correo",)
 
     
-class UsuarioChangeForm(UsuarioChangeForm):
+class UsuarioChangeForm(UserChangeForm):
     class Meta:
         model = Usuarios
         fields = ("correo",)
