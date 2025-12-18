@@ -157,7 +157,7 @@ class Areas(models.Model):
     
 
 class Asignaturas(models.Model):
-    nombre = models.CharField(max_length=100)
+    nombre = models.CharField(max_length=100, unique=True)
     grado = models.ForeignKey(Grados, on_delete=models.CASCADE, related_name="asignaturas")
     area = models.ForeignKey(Areas, on_delete=models.CASCADE, related_name="asignaturas")
 
