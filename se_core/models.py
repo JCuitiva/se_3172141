@@ -90,7 +90,7 @@ class Estados_Civiles(models.Model):
     
 
 class Estratos(models.Model):
-    nombre = models.charField(max_length=20)
+    nombre = models.CharField(max_length=20)
 
     class Meta:
         verbose_name = "Estrato"
