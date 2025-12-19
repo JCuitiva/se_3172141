@@ -3,6 +3,38 @@
 {% include 'navbar.html' %}
 {% block contenido %}
     <h1>CONTÁCTANOS</h1>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime odit temporibus soluta, voluptatibus dolores hic velit. Architecto earum consequatur corporis, qui nostrum minus sequi error iure necessitatibus voluptates culpa voluptate?
+<div class="container mt-4">
+    <div class="row">
+        <!-- Columna para el formulario -->
+        <div class="col-md-6">
+            <h2>Envíanos un mensaje</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+        <!-- Columna para la información de contacto -->
+        <div class="col-md-6 mt-4 mt-md-0">
+            <h2>Contacto</h2>
+            <p><i class="bi bi-whatsapp"></i> 330 222 5555</p>
+            <p><i class="bi bi-facebook"></i> https://www.facebook.com/sistema_escolar</p>
+            <p><i class="bi bi-twitter"></i> x.com/sistema_escolar</p>
+            <p><i class="bi bi-instagram"></i> instagram.com/sistema_escolar</p>
+            <!-- Aquí puedes añadir un mapa incrustado si lo deseas -->
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 {% include 'includes/footer.html' %}

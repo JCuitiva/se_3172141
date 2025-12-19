@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "SYFY Hero";
+    src: url("../fonts/SYFY_Hero-Regular-subset.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SYFY Sidekick";
+    src: url("../fonts/SYFY_Sidekick-Regular-subset.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GT Cinetype Regular";
+    src: url("../fonts/GT-Cinetype-Syfy-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GT Cinetype Light";
+    src: url("../fonts/GT-Cinetype-Syfy-Light.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.layout-content{
+    padding: 40px 80px;
+}
+
+body{
+     background-image: url("../img/Fondo_principal.jpg");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     min-height: 100vh;
+    }
+
+h1{
+    text-align: center;
+    color: yellow;
+    font-family: "SYFY Hero", sans-serif;
+    font-size: 3.6pc;
+    letter-spacing: 1.1px;
+}
+
+h2{
+    text-align: center;
+    font-family: "SYFY Sidekick", sans-serif;
+}
+
+p{
+    color: white;
+}
+
+nav ul{
+    background-color: yellow;
+    display: flex;
+    top: 0;
+    width: 100%;
+    list-style: none;
+}
+
+nav li{
+    margin: 0;
+}
+
+nav a {
+    color: black;
+    font-size: 1.3pc;
+    font-family: "SYFY Sidekick", sans-serif;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+}
+
+.mision-vision{
+    display: flex;
+    gap: 100px;
+    padding: 40px 140px;
+}
+
+.bloque {
+    width: 50%;             /* Cada uno ocupa la mitad */
+}
+
+.Content_nosotros{
+    padding: 40px 0px;
+}

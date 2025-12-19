@@ -1,17 +1,26 @@
 {% extends 'base.html' %}
 {% block titulo %}Contáctanos{% endblock %}
 {% include 'navbar.html' %}
-{% block contenido %}
-    <h1>INICIO DE SESIÓN</h1>
-    <form action="{% url 'login' %}" method="post">
-        {% csrf_token %}
-        <input type="email" name="correo" required placeholder="Ingrese su correo">
-        <input type="password" name="clave" required placeholder="Ingrese su contraseña">
-        <input type="submit" value="Iniciar Sesión">
-    </form>
-    {% if mensaje %}
-        {{ mensaje }}
-    {% endif %}
 
+{% block contenido %}
+    <div class="d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+        <div class="w-100 p-4" style="max-width: 400px; background-color: rgba(250, 235, 215, 0.295); border-radius: 10px;">
+           
+            <h1 class="text-center mb-4" style="color:yellow;">INICIO DE SESIÓN</h1>
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <input type="email" name="correo" class="form-control" required placeholder="Ingrese su correo">
+                </div>
+                <div class="mb-3">
+                    <input type="password" name="clave" class="form-control" required placeholder="Ingrese su contraseña">
+                </div>
+                <input type="submit" value="Iniciar Sesión" class="btn btn-dark w-100">
+            </form>
+            {% if mensaje %}
+                <div class="alert alert-danger mt-3 text-center">{{ mensaje }}</div>
+            {% endif %}
+        </div>
+    </div>
 {% endblock %}
 {% include 'includes/footer.html' %}

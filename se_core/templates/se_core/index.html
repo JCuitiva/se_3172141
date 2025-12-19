@@ -1,7 +1,65 @@
 {% extends 'base.html' %}
 
-{% block titulo %}Sistema Escolar{% endblock %}
+{% block titulo %}Sistema Escolar | Panel de Control{% endblock %}
 
 {% block contenido %}
-    <h1 style="text-align: center;">FUNCIONA...</h1>
+<div class="container py-5">
+    <!-- Encabezado con Estilo -->
+    <div class="text-center mb-5">
+        <h1 class="display-4" style="color: yellow;">SISTEMA ESCOLAR</h1>
+        <p class="lead text-muted">Gestión académica centralizada y eficiente</p>
+        <hr class="mx-auto" style="width: 100px; height: 5px; background-color: #0d6efd; border-radius: 5px;">
+    </div>
+
+    <!-- Panel de Acciones Rápidas -->
+    <div class="row g-4 justify-content-center">
+        <!-- Estudiante -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-3 hover-shadow">
+                <div class="card-body">
+                    <i class="bi bi-people-fill text-primary mb-3" style="font-size: 3rem;"></i>
+                    <h5 class="card-title fw-bold">Estudiantes</h5>
+                    <p class="card-text text-secondary">Administra inscripciones, registros y expedientes.</p>
+                    <a href="#" class="btn btn-outline-primary stretched-link">Gestionar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Docentes -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-3 hover-shadow">
+                <div class="card-body">
+                    <i class="bi bi-person-badge-fill text-success mb-3" style="font-size: 3rem;"></i>
+                    <h5 class="card-title fw-bold">Docentes</h5>
+                    <p class="card-text text-secondary">Control de nómina, asignaturas y horarios.</p>
+                    <a href="#" class="btn btn-outline-success stretched-link">Gestionar</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reportes -->
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm text-center p-3 hover-shadow">
+                <div class="card-body">
+                    <i class="bi bi-graph-up-arrow text-info mb-3" style="font-size: 3rem;"></i>
+                    <h5 class="card-title fw-bold">Reportes</h5>
+                    <p class="card-text text-secondary">Estadísticas de rendimiento y asistencia general.</p>
+                    <a href="#" class="btn btn-outline-info stretched-link">Ver Reportes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Estilos extra para interactividad -->
+<style>
+    .hover-shadow {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-shadow:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    }
+</style>
 {% endblock %}
+
